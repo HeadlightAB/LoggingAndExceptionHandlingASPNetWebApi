@@ -3,7 +3,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using Logging;
 
 namespace FullFrameworkLoggingUsingFilter
 {

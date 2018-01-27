@@ -90,6 +90,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="LoggingActionFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -105,12 +106,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Logging\Logging.csproj">
-      <Project>{6dc9cdbf-614a-423f-a906-4631e7a2cc39}</Project>
-      <Name>Logging</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

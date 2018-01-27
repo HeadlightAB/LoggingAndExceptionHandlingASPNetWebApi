@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace Logging
+namespace FullFrameworkLoggingUsingFilter
 {
     public class Logger
     {
