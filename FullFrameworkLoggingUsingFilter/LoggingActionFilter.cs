@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using Logging;
 
 namespace FullFrameworkLoggingUsingFilter
 {
@@ -13,11 +15,11 @@ namespace FullFrameworkLoggingUsingFilter
         {
             try
             {
+                var correlationId = Guid.NewGuid();
+                AddCorrelartionId(actionContext.Request, correlationId);
+
                 // Logging goes here
-                var method = actionContext.Request.Method;
-                var user = actionContext.RequestContext.Principal.Identity;
-                var url = actionContext.Request.RequestUri;
-                actionContext.Request.Headers.Add(XCorrelationHeader, Guid.NewGuid().ToString());
+                Logger.Instance.BeginRequest(actionContext, correlationId);
             }
             catch
             {
@@ -32,8 +34,7 @@ namespace FullFrameworkLoggingUsingFilter
             try
             {
                 // Logging goes here
-                var statusCode = actionExecutedContext.Response.StatusCode;
-                var correlationId = actionExecutedContext.Request.Headers.GetValues(XCorrelationHeader).Single();
+              Logger.Instance.EndRequest(actionExecutedContext, GetCorrelationId(actionExecutedContext.Request));
             }
             catch
             {
@@ -41,6 +42,16 @@ namespace FullFrameworkLoggingUsingFilter
             }
 
             base.OnActionExecuted(actionExecutedContext);
+        }
+
+        private string GetCorrelationId(HttpRequestMessage request)
+        {
+            return request.Headers.GetValues(XCorrelationHeader).FirstOrDefault();
+        }
+
+        private void AddCorrelartionId(HttpRequestMessage request, Guid correlationId)
+        {
+            request.Headers.Add(XCorrelationHeader, correlationId.ToString());
         }
     }
 }
