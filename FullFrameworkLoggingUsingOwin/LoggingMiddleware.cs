@@ -2,10 +2,19 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.Owin;
+using Owin;
 
 namespace FullFrameworkLoggingUsingOwin
 {
-    public class LoggingMiddleware : OwinMiddleware
+    public static class LoggingMiddlewareExtensions
+    {
+        public static void UseLoggingMiddleware(this IAppBuilder app)
+        {
+            app.Use<LoggingMiddleware>();
+        }
+    }
+
+    internal class LoggingMiddleware : OwinMiddleware
     {
         public LoggingMiddleware(OwinMiddleware next) : base(next)
         {}

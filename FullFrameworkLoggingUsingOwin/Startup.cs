@@ -13,7 +13,7 @@ namespace FullFrameworkLoggingUsingOwin
             var config = new HttpConfiguration();
 
             // Add logging middleware, before webapi
-            app.Use<LoggingMiddleware>();
+            app.UseLoggingMiddleware();
 
             WebApiConfig.Register(config);
             app.UseWebApi(config);
