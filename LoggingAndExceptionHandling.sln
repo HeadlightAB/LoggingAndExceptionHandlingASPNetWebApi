@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullFrameworkLoggingUsingFilter", "FullFrameworkLoggingUsingFilter\FullFrameworkLoggingUsingFilter.csproj", "{B5DF543A-5568-447D-BF97-1EF3E1D66273}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{6DC9CDBF-614A-423F-A906-4631E7A2CC39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullFrameworkLoggingUsingOwin", "FullFrameworkLoggingUsingOwin\FullFrameworkLoggingUsingOwin.csproj", "{575B566C-87C1-4EE2-B0F0-C747B040C0B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6DC9CDBF-614A-423F-A906-4631E7A2CC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC9CDBF-614A-423F-A906-4631E7A2CC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC9CDBF-614A-423F-A906-4631E7A2CC39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575B566C-87C1-4EE2-B0F0-C747B040C0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575B566C-87C1-4EE2-B0F0-C747B040C0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575B566C-87C1-4EE2-B0F0-C747B040C0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575B566C-87C1-4EE2-B0F0-C747B040C0B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
