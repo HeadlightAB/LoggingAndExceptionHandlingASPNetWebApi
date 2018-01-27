@@ -4,7 +4,7 @@ using System.Web.Http;
 namespace FullFrameworkLoggingUsingFilter.Controllers
 {
     [RoutePrefix("api/vehicles")]
-    public class VehicleController : ApiController
+    public class VehiclesController : ApiController
     {
         [HttpGet]
         [Route("")]
