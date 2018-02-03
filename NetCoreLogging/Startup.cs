@@ -16,7 +16,9 @@ namespace NetCoreLogging
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(
+                options => options.Filters.Add(typeof(LoggingFilterAttribute)) // Logging using global action filter
+            );
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -26,7 +28,7 @@ namespace NetCoreLogging
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseLoggingMiddleware();
+            app.UseLoggingMiddleware(); // Logging using middleware
 
             app.UseMvc();
         }
