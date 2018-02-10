@@ -1,0 +1,1 @@
+This is the source code for the example in the blog post here http://headlightblog.azurewebsites.net/p/4f5c65af-a0be-47ad-be12-2449788eb4aa/#core-framework-logging-filter.
