@@ -1,1 +1,1 @@
-This is the complete source for the section http://headlightblog.azurewebsites.net/p/4f5c65af-a0be-47ad-be12-2449788eb4aa/#full-framework-logging-middleware on the Headlight Blog.
+This is the complete source for the section http://blog.headlight.se/loggning-post-2/#full-framework-logging-middleware on the Headlight Blog.
