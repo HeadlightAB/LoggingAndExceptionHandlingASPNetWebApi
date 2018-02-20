@@ -1,0 +1,1 @@
+This is the source code for the example in the blog post here http://blog.headlight.se/loggning-post-2/#core-framework-logging-filter and here http://blog.headlight.se/loggning-post-2/#core-logging-middleware.
