@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
 namespace FullFrameworkLoggingUsingFilter
 {
@@ -6,6 +7,8 @@ namespace FullFrameworkLoggingUsingFilter
     {
         public static void Register(HttpConfiguration config)
         {
+            config.Services.Replace(typeof(IExceptionHandler), new CustomExceptionHandler());
+
             // Web API configuration and services
             config.Filters.Add(new LoggingActionFilter());
 
