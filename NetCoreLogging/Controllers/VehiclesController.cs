@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace NetCoreLogging.Controllers
 {
@@ -11,6 +12,20 @@ namespace NetCoreLogging.Controllers
         public IActionResult GetAll()
         {
             return new OkObjectResult(new {a = 123});
+        }
+
+        [HttpGet]
+        [Route("throw")]
+        public IActionResult Throw()
+        {
+            throw new SafeForWorldOutsideException();
+        }
+
+        [HttpGet]
+        [Route("throwservererror")]
+        public IActionResult ThrowServerError()
+        {
+            throw new Exception("This is not safe for outside, but...");
         }
     }
 }
