@@ -30,7 +30,7 @@ namespace NetCoreLogging
 
             app.UseLoggingMiddleware(); // Logging using middleware
 
-            app.ExceptionHandlingMiddleware(); // Exception handling
+            app.UseExceptionHandlingMiddleware(); // Exception handling
             
             app.UseMvc();
         }

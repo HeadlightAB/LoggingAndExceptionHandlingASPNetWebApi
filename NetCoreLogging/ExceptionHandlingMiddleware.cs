@@ -8,7 +8,7 @@ namespace NetCoreLogging
 {
     public static class ExceptionHandlingMiddlewareExtensions
     {
-        public static IApplicationBuilder ExceptionHandlingMiddleware(this IApplicationBuilder app)
+        public static IApplicationBuilder UseExceptionHandlingMiddleware(this IApplicationBuilder app)
         {
             return app.UseMiddleware<ExceptionHandlingMiddleware>();
         }
