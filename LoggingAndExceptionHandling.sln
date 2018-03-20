@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullFrameworkLoggingUsingOw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLogging", "NetCoreLogging\NetCoreLogging.csproj", "{F31A8001-39E1-449D-8D7B-B3962ACC363B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreErrorHandling", "NetCoreErrorHandling\NetCoreErrorHandling.csproj", "{1E280061-4647-4FEA-8945-037DA1C2D314}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{F31A8001-39E1-449D-8D7B-B3962ACC363B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F31A8001-39E1-449D-8D7B-B3962ACC363B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F31A8001-39E1-449D-8D7B-B3962ACC363B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E280061-4647-4FEA-8945-037DA1C2D314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E280061-4647-4FEA-8945-037DA1C2D314}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E280061-4647-4FEA-8945-037DA1C2D314}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E280061-4647-4FEA-8945-037DA1C2D314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
