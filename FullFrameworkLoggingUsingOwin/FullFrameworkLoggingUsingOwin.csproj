@@ -98,11 +98,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="CustomExceptionHandler.cs" />
+    <Compile Include="ExceptionForOutsideWorldResult.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IExceptionForOutsideWorld.cs" />
     <Compile Include="LoggingMiddleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafeForWorldOutsideException.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
   </ItemGroup>
@@ -130,7 +134,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50513</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

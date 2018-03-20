@@ -19,5 +19,12 @@ namespace FullFrameworkLoggingUsingOwin.Controllers
         {
             return StatusCode(HttpStatusCode.NoContent);
         }
+
+        [HttpGet]
+        [Route("throw")]
+        public IHttpActionResult Throw()
+        {
+            throw new SafeForWorldOutsideException();
+        }
     }
 }
